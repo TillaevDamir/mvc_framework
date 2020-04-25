@@ -2,15 +2,16 @@
 
 namespace app\core;
 
-/**
- * Main controller
- */
+use app\core\View;
+
 abstract class Controller
 {
-	public $route;
+	protected $route;
+	protected $view;
 
 	public function __construct($route)
 	{
 		$this->route = $route;
+		$this->view = new View($route);
 	}
 }

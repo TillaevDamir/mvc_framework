@@ -2,9 +2,8 @@
 
 namespace app\core;
 
-/**
- * 
- */
+use app\core\View;
+
 class Router 
 {	
 	protected $routes = array();
@@ -58,17 +57,17 @@ class Router
 				}
 				else
 				{
-					echo "Method not exists ".$action;
+					View::errorCode(404);
 				}
 			}
 			else
 			{
-				echo "Class not exists ".$path;
+				View::errorCode(403);
 			}
 		}
 		else
 		{
-			exit('Page not found');
+			View::errorCode(404);
 		}
 	}
 }

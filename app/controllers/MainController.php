@@ -2,10 +2,15 @@
 
 namespace app\controllers;
 
-class MainController
+use app\core\Controller;
+use app\lib\DB;
+
+class MainController extends Controller
 {
 	public function indexAction()
 	{
-		echo "Main controller action index";
+		$db = new DB;
+
+		$this->view->render('Main Page');
 	}
 }

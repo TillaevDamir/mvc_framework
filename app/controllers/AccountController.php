@@ -8,12 +8,12 @@ class AccountController extends Controller
 {
 	public function loginAction()
 	{
-		echo "Login action";
+		$this->view->redirect('/mvc_framework');
+		$this->view->render('Login Page');
 	}
 
 	public function registerAction()
 	{
-		echo "Register action";
-		var_dump($this->route);
+		$this->view->render('Register Page');
 	}
 }
