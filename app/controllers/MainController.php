@@ -3,14 +3,14 @@
 namespace app\controllers;
 
 use app\core\Controller;
-use app\lib\DB;
 
 class MainController extends Controller
 {
 	public function indexAction()
 	{
-		$db = new DB;
+		$result = $this->model->getNews();
+		$vars['news'] = $result;
 
-		$this->view->render('Main Page');
+		$this->view->render('Main Page', $vars);
 	}
 }

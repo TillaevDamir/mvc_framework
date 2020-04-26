@@ -8,7 +8,10 @@ class AccountController extends Controller
 {
 	public function loginAction()
 	{
-		$this->view->redirect('/mvc_framework');
+		if(!empty($_POST))
+		{
+			exit(json_encode(['name' => 'Damir','email' => 123]));
+		}
 		$this->view->render('Login Page');
 	}
 
