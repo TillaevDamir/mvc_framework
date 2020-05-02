@@ -4,5 +4,5 @@
 	<input type="text" name="name">
 	<p>Password</p>
 	<input type="text" name="email">
-	<p><button type="submit" name="">Login</button></p>
+	<p><button type="submit" name="save">Login</button></p>
 </form>
